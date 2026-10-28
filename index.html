@@ -1,0 +1,199 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="index,follow"><title>BrandFlux — AI-Powered Product Ads</title>
+<meta name="description" content="BrandFlux creates cinematic AI-powered product advertisements and promotional videos for small businesses and online stores. Turning Products Into Experiences.">
+<meta property="og:title" content="BrandFlux — AI-Powered Product Ads"><meta property="og:description" content="Cinematic AI product ads for brands that want to stand out.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--card:#141210;--line:#2e2616;--gold:#d4af37;--gold2:#f3d77a;--tx:#f5f1e6;--mut:#b9b09a;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:inherit}html{scroll-padding-top:calc(76px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 Inter,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#0a0a0a;z-index:30}
+[hidden]{display:none!important}a{color:var(--gold2)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(10,10,10,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{max-width:1100px;margin:auto;padding:10px 16px;display:flex;align-items:center;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;font:700 24px 'Cormorant Garamond',Georgia,serif;color:var(--gold2);text-decoration:none;margin-right:auto}
+.brand img{width:40px;height:40px;border-radius:50%}
+nav{display:flex;gap:2px}nav a{color:var(--tx);text-decoration:none;padding:8px 10px;border-radius:8px;font-size:15px}nav a:hover{color:var(--gold2)}
+#menu{display:none;background:none;border:1px solid var(--line);color:var(--gold2);border-radius:8px;padding:7px 12px;font-size:18px}
+@media(max-width:940px){#menu{display:block}nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:#0a0a0a;padding:8px 16px 16px;border-bottom:1px solid var(--line)}nav.open{display:flex}}
+.btn{display:inline-block;border:0;cursor:pointer;background:linear-gradient(135deg,#f3d77a,#c9a227 55%,#a67c00);color:#120d00;font:600 15px Inter,sans-serif;padding:12px 22px;border-radius:999px;text-decoration:none}
+.btn.ghost{background:none;color:var(--gold2);border:1px solid var(--gold)}.btn.sm{padding:9px 16px;font-size:14px}.btn[disabled],.btn.off{opacity:.5;pointer-events:none}
+.sec{max-width:1100px;margin:auto;padding:52px 18px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;line-height:1.15;margin:0 0 12px}
+h1{font-size:clamp(34px,7vw,58px);color:var(--gold2)}h2{font-size:clamp(28px,5vw,40px);color:var(--gold2)}h3{font-size:24px}
+.mut{color:var(--mut)}.hero{text-align:center;padding-top:36px;background:radial-gradient(ellipse at 50% 0,#2a210b,transparent 62%)}
+.hero img{width:min(210px,52vw);border-radius:50%;box-shadow:0 0 60px rgba(212,175,55,.25)}
+.tag{font:italic 600 clamp(22px,4vw,30px) 'Cormorant Garamond',Georgia,serif;color:var(--gold)}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.cardwrap{display:flex;justify-content:center}.cardwrap img{width:auto;height:auto;max-width:100%;max-height:620px;border-radius:14px;border:1px solid var(--gold);box-shadow:0 20px 60px #000,0 0 40px rgba(212,175,55,.15)}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}.box.hot{border-color:var(--gold);box-shadow:0 0 30px rgba(212,175,55,.12)}
+.price{font:700 30px 'Cormorant Garamond',Georgia,serif;color:var(--gold2)}.box ul{padding-left:20px;margin:12px 0 18px}
+.poster{display:grid;place-items:center;width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#1d1606,#000);color:var(--gold2);font-size:44px;border:1px solid var(--line);border-radius:12px;cursor:pointer}
+.pl{width:100%;aspect-ratio:16/9;border:0;border-radius:12px;background:#000}
+label{display:block;margin:14px 0 4px;font-size:14px;color:var(--mut)}
+input,select,textarea{width:100%;background:#0d0d0d;color:var(--tx);border:1px solid #3a3020;border-radius:10px;padding:12px;font:inherit}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.e,.err{color:#ff9a90;font-size:14px}.ok{color:#8fe3a0}.warn{border:1px solid #6b5518;background:#1c1606;border-radius:12px;padding:12px 16px;margin-bottom:16px}
+.st{display:inline-block;padding:1px 10px;border-radius:999px;border:1px solid var(--gold);font-size:13px;color:var(--gold2)}
+.item{display:flex;justify-content:space-between;gap:8px;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);color:var(--tx);border-radius:12px;padding:12px;margin-bottom:8px;cursor:pointer;font:inherit}.item.on{border-color:var(--gold)}
+.log{max-height:340px;overflow:auto;display:flex;flex-direction:column;gap:8px;padding:10px;background:#0d0d0d;border:1px solid var(--line);border-radius:12px;margin:10px 0}
+.msg{max-width:88%;padding:8px 12px;border-radius:12px;background:#1b1710;align-self:flex-start;word-break:break-word}.msg p{margin:0}.msg.me{align-self:flex-end;background:#3a2e0d}
+.msg.system{align-self:center;background:none;color:var(--mut);font-size:14px;text-align:center}.msg small{display:block;color:var(--mut);font-size:11px}
+.row{display:flex;gap:8px;flex-wrap:wrap}.row input{flex:1;min-width:0}.two{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+footer{border-top:1px solid var(--line);padding:28px 18px;text-align:center;color:var(--mut);font-size:14px}footer img{width:56px;border-radius:50%}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<header><div class="bar"><a class="brand" href="#home"><img data-logo alt="BrandFlux logo">BrandFlux</a>
+<nav id="nav" aria-label="Main"><a href="#home">Home</a><a href="#work">Our Work</a><a href="#pricing">Services &amp; Pricing</a><a href="#how">How It Works</a><a href="#orders">My Orders</a><a href="#contact">Contact</a><a id="adminLink" href="#admin" hidden>Admin</a></nav>
+<a class="btn sm" href="#order">Order Now</a><button id="menu" aria-label="Menu" aria-expanded="false">☰</button></div></header>
+
+<main id="v-home">
+<section class="sec hero" id="top"><img data-logo alt="BrandFlux official logo"><h1>BrandFlux — AI-Powered Product Ads</h1>
+<p class="mut" style="max-width:640px;margin:0 auto 10px">Turn your products into eye-catching advertisements with cinematic AI-powered videos designed to help your brand stand out.</p>
+<p class="tag">Turning Products Into Experiences.</p>
+<div class="cta"><a class="btn" href="#work">View Our Work</a><a class="btn ghost" href="#order">Order Your Ad</a></div></section>
+<section class="sec" style="padding-top:8px"><div class="cardwrap"><img data-card alt="BrandFlux business card" width="720" height="1290"></div></section>
+<section class="sec" id="work"><h2>Our Work</h2><p class="mut">Product advertisement videos created by BrandFlux.</p><div class="grid" id="wgrid"></div></section>
+<section class="sec" id="pricing"><h2>Services &amp; Pricing</h2><p class="mut">Starting prices. Final pricing depends on the product, complexity, and the requirements we agree together. Results of any advertisement cannot be guaranteed.</p><div class="grid" id="pgrid"></div></section>
+<section class="sec" id="how"><h2>How It Works</h2><div class="grid" id="hgrid"></div></section>
+<section class="sec" id="contact"><h2>Contact</h2><p class="mut">Questions before ordering? Reach us on WhatsApp, or place an order and chat with us inside it.</p>
+<div class="cta" style="justify-content:flex-start"><a id="wa" class="btn" target="_blank" rel="noopener">WhatsApp</a><a id="em" class="btn ghost" hidden>Email</a></div><p id="wanote" class="mut" hidden></p></section>
+</main>
+
+<main id="v-order" class="sec" hidden><h2>Order Your Ad</h2><div id="onotice"></div><form id="of" novalidate></form><div id="osuccess" hidden></div></main>
+
+<main id="v-orders" class="sec" hidden><h2>My Orders</h2><div class="two"><div id="mlist"></div><div id="mdetail" hidden><div id="minfo"></div><div id="mchat"></div></div></div></main>
+
+<main id="v-admin" class="sec" hidden><h2>Admin Dashboard</h2>
+<p id="adnote" class="warn" hidden>Admin access is limited to the BrandFlux owner and editors. Access is enforced by the database rules, not only by this page.</p>
+<div id="adm" hidden><div class="two"><div class="box"><h3>Portfolio videos</h3><div id="pform"></div><div id="plist"></div></div>
+<div class="box"><h3>Orders <button class="btn ghost sm" id="rf">Refresh</button></h3><div id="alist"></div></div></div><div class="box" id="adetail" style="margin-top:18px" hidden></div></div></main>
+
+<footer><img data-logo alt="BrandFlux"><p>BrandFlux — Turning Products Into Experiences.<br>www.brandfluxstudio.com</p></footer>
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+const C=window.BF_CONFIG||{},LOGO='logo.webp',CARD='card.webp',WA=C.WHATSAPP||'',EMAIL=C.EMAIL||'';
+const $=s=>document.querySelector(s),ID=s=>document.getElementById(s);
+const el=(t,a={},...k)=>{const e=document.createElement(t);for(const[x,v]of Object.entries(a)){if(x.startsWith('on'))e[x]=v;else if(v!=null)e.setAttribute(x,v)}e.append(...k.filter(c=>c!=null));return e};
+const rich=t=>String(t||'').split(/(https?:\/\/[^\s<>"]+)/g).map((s,i)=>i%2?el('a',{href:s,target:'_blank',rel:'noopener'},s):s);
+const fmt=t=>new Date(t).toLocaleString(),sp=()=>el('div',{style:'height:8px'});
+const DUR=['10–15 seconds','20–30 seconds','30–45 seconds'],ST=['Pending','Accepted','In Progress','Revision Requested','Completed','Cancelled'];
+let PK=[{n:'Starter Ad',p:'PKR 1,000',d:DUR[0],f:['10–15 second AI product advertisement','Suitable for a simple product promotion','One agreed visual concept']},{n:'Premium Ad',p:'PKR 2,500',d:DUR[1],hot:1,f:['20–30 second AI product advertisement','More detailed cinematic scenes','Suitable for social media product promotion']},{n:'Pro Ad',p:'Starting from PKR 5,000',d:DUR[2],f:['30–45 second premium product advertisement','More advanced visual storytelling','Custom creative direction']}];
+const ok=C.SUPABASE_URL&&C.SUPABASE_ANON_KEY&&!/YOUR_/.test(C.SUPABASE_URL+C.SUPABASE_ANON_KEY)&&window.supabase;
+const sb=ok?supabase.createClient(C.SUPABASE_URL,C.SUPABASE_ANON_KEY):null;
+let session=null,uid=null,isAdmin=false,pre={},after=null,orders=[],items=[],form=ID('of');
+document.querySelectorAll('[data-logo]').forEach(i=>i.src=LOGO);document.querySelectorAll('[data-card]').forEach(i=>i.src=CARD);
+if(!sb)document.body.prepend(el('div',{class:'warn',style:'margin:0;border-radius:0'},'Backend not connected yet: open config.js and add your Supabase URL and anon key (see README).'));
+/* nav + routing */
+ID('nav').insertBefore(el('a',{id:'authLink',href:'#auth'},'Sign in'),ID('adminLink'));
+document.body.insertBefore(el('main',{id:'v-auth',class:'sec',hidden:''},el('div',{id:'authbox',style:'max-width:420px'})),$('footer'));
+const V=['order','orders','admin','auth'];
+function route(){const h=location.hash.slice(1)||'home',v=V.includes(h)?h:'home';['home',...V].forEach(x=>ID('v-'+x).hidden=x!==v);ID('nav').classList.remove('open');ID('menu').setAttribute('aria-expanded','false');
+const t=ID(h);if(v==='home'&&h!=='home'&&t)t.scrollIntoView();else scrollTo(0,0);if(v==='order'){ID('osuccess').hidden=true;fillForm()}if(v==='auth')renderAuth();if(v==='orders')renderMine();if(v==='admin')loadAdmin()}
+function go(h){if(location.hash!=='#'+h)location.hash=h;else route()}
+addEventListener('hashchange',route);
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(a){e.preventDefault();go(a.getAttribute('href').slice(1))}});
+ID('menu').onclick=()=>{const o=ID('nav').classList.toggle('open');ID('menu').setAttribute('aria-expanded',o)};
+/* static sections */
+function renderPricing(){ID('pgrid').replaceChildren(...PK.map(p=>el('div',{class:'box'+(p.hot?' hot':'')},el('h3',{},p.n),el('div',{class:'price'},p.p),el('ul',{},...(p.f||[]).map(x=>el('li',{},x))),el('button',{class:'btn',onclick:()=>{pre.pkg=p.n;go('order')}},'Choose Package'))))}
+ID('hgrid').append(...[['1. Order','Create an account, pick a package and send your product details.'],['2. Review','BrandFlux reviews your order, accepts it and agrees the final price with you in the order chat.'],['3. Create','We build your cinematic AI advertisement. Revisions can be requested.'],['4. Deliver','You receive a delivery link for the finished ad inside My Orders.']].map(s=>el('div',{class:'box'},el('h3',{},s[0]),el('p',{class:'mut'},s[1]))));
+const waLink=/^\d{8,15}$/.test(WA)?'https://wa.me/'+WA:null;
+if(waLink){ID('wa').href=waLink;ID('wa').textContent='Chat on WhatsApp'}else{ID('wa').className='btn off';ID('wa').removeAttribute('href');ID('wa').textContent='WhatsApp (not set up yet)';ID('wanote').hidden=false;ID('wanote').textContent='A WhatsApp number has not been added yet. Orders and chat on this site still work.'}
+if(EMAIL){ID('em').hidden=false;ID('em').href='mailto:'+EMAIL}
+function contactForm(){const n=el('input',{placeholder:'Your name','aria-label':'Name'}),e=el('input',{type:'email',placeholder:'Email','aria-label':'Email'}),t=el('textarea',{rows:'4',placeholder:'Your message','aria-label':'Message'}),m=el('p',{role:'status'});
+ID('contact').append(el('div',{class:'box',style:'margin-top:20px;max-width:560px'},el('h3',{},'Send a message'),n,sp(),e,sp(),t,el('p',{},el('button',{class:'btn',onclick:async()=>{m.className='err';if(!n.value.trim()||!/^\S+@\S+\.\S+$/.test(e.value)||!t.value.trim()){m.textContent='Please enter your name, a valid email and a message.';return}if(!sb){m.textContent='Messaging is not set up yet.';return}
+const r=await sb.from('contact_messages').insert({name:n.value.trim(),email:e.value.trim(),message:t.value.trim()});if(r.error){m.textContent='Message not sent. Please try again.';return}m.className='ok';m.textContent='Message sent. We will reply by email.';n.value=e.value=t.value=''}},'Send message')),m))}
+/* portfolio */
+function embed(u){let m;if(m=u.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|shorts\/|embed\/))([\w-]{11})/))return el('iframe',{src:'https://www.youtube-nocookie.com/embed/'+m[1]+'?autoplay=1',allow:'autoplay; encrypted-media; fullscreen',allowfullscreen:'',title:'Video player',class:'pl'});
+if(m=u.match(/vimeo\.com\/(\d+)/))return el('iframe',{src:'https://player.vimeo.com/video/'+m[1]+'?autoplay=1',allow:'autoplay; fullscreen',allowfullscreen:'',title:'Video player',class:'pl'});
+if(/\.(mp4|webm|mov)(\?|$)/i.test(u))return el('video',{src:u,controls:'',autoplay:'',playsinline:'',class:'pl'});
+return el('a',{href:u,target:'_blank',rel:'noopener',class:'btn ghost'},'Open video')}
+function renderWork(){ID('wgrid').replaceChildren(...(items.length?items.map(v=>{const slot=el('div',{},el('button',{class:'poster','aria-label':'Play '+v.title,onclick:()=>slot.replaceChildren(embed(v.url))},'▶'));
+return el('article',{class:'box'},slot,el('h3',{style:'margin-top:12px'},v.title),el('button',{class:'btn ghost sm',onclick:()=>{pre.style='Similar to: '+v.title;pre.ref=v.url;go('order')}},'Order This Style'))}):
+[el('div',{class:'box',style:'grid-column:1/-1;text-align:center'},el('h3',{},'Our showcase is coming soon'),el('p',{class:'mut'},'No portfolio videos have been published yet.'+(isAdmin?' Add yours in Admin → Portfolio videos with a YouTube, Vimeo or direct .mp4 link.':'')))]))}
+async function loadItems(){const r=await sb.from('portfolio_videos').select('*').order('created_at',{ascending:false});if(!r.error){items=r.data;renderWork();renderP()}}
+/* auth */
+function renderAuth(mode='in'){const em=el('input',{type:'email',autocomplete:'email',placeholder:'Email','aria-label':'Email'}),pw=el('input',{type:'password',autocomplete:mode==='in'?'current-password':'new-password',placeholder:'Password (min 8 characters)','aria-label':'Password'}),nm=el('input',{placeholder:'Full name','aria-label':'Full name',autocomplete:'name'}),m=el('p',{role:'status'});
+ID('authbox').replaceChildren(el('h2',{},mode==='in'?'Sign in':'Create account'),...(mode==='up'?[nm,sp()]:[]),em,sp(),pw,el('p',{},el('button',{class:'btn',onclick:async()=>{m.className='err';
+if(!sb){m.textContent='The backend is not connected yet.';return}if(!/^\S+@\S+\.\S+$/.test(em.value)){m.textContent='Enter a valid email address.';return}if(pw.value.length<8){m.textContent='Password must be at least 8 characters.';return}if(mode==='up'&&!nm.value.trim()){m.textContent='Enter your full name.';return}
+const r=mode==='in'?await sb.auth.signInWithPassword({email:em.value.trim(),password:pw.value}):await sb.auth.signUp({email:em.value.trim(),password:pw.value,options:{data:{full_name:nm.value.trim()}}});
+if(r.error){m.textContent=r.error.message;return}
+if(!r.data.session){m.className='ok';m.textContent='Account created. Check your email and click the confirmation link, then sign in.';return}
+const n=after||'orders';after=null;go(n)}},mode==='in'?'Sign in':'Register')),m,el('button',{class:'btn ghost sm',onclick:()=>renderAuth(mode==='in'?'up':'in')},mode==='in'?'New here? Create an account':'Have an account? Sign in'))}
+async function refresh(){uid=session?.user.id||null;isAdmin=false;
+if(sb&&uid){const p=await sb.from('profiles').select('is_admin').eq('id',uid).maybeSingle();isAdmin=!!(p.data&&p.data.is_admin)}
+const a=ID('authLink');if(uid){a.textContent='Sign out';a.href='#home';a.onclick=()=>{sb.auth.signOut()}}else{a.textContent='Sign in';a.href='#auth';a.onclick=null}
+ID('adminLink').hidden=!isAdmin;if(!uid){orders=[];msel=null;mfor=null;mchat&&mchat();mchat=null;achat&&achat();achat=null;afor=null;asel=null}
+else await loadOrders();renderMine();fillForm();renderWork();if(!ID('v-admin').hidden)loadAdmin()}
+/* order form */
+const F=[['name','Customer name *','text'],['email','Email address *','email'],['wa','WhatsApp number (optional)','tel'],['product','Product or business name *','text'],['category','Product category *','select',['Perfume','Clothing','Cosmetics','Food & beverage','Electronics','Jewellery','Other']],['pkg','Selected package *','select'],['price','Package price','text'],['duration','Preferred video duration *','select',DUR],['desc','Describe your advertisement *','textarea'],['style','Desired visual style *','text'],['refurl','Reference video URL (optional)','url'],['image','Product image upload (optional, JPG/PNG/WebP, max 5 MB)','file'],['logofile','Logo or brand assets upload (optional, image, max 5 MB)','file'],['notes','Additional instructions (optional)','textarea']];
+const pk=()=>PK.find(p=>p.n===ID('f-pkg').value)||PK[0];
+function syncPkg(){ID('f-price').value=pk().p;if(DUR.includes(pk().d))ID('f-duration').value=pk().d}
+function buildForm(){form.replaceChildren();F.forEach(([k,l,t,o])=>{if(k==='pkg')o=PK.map(p=>p.n);const c=t==='select'?el('select',{name:k,id:'f-'+k},...o.map(x=>el('option',{},x))):t==='textarea'?el('textarea',{name:k,id:'f-'+k,rows:'4'}):el('input',{name:k,id:'f-'+k,type:t,accept:t==='file'?'image/jpeg,image/png,image/webp':null,autocomplete:k==='name'?'name':k==='email'?'email':'off'});
+if(k==='price')c.readOnly=true;form.append(el('label',{for:'f-'+k},l),c,el('div',{class:'e',id:'e-'+k,role:'alert'}))});
+form.append(el('p',{class:'mut'},'Final pricing depends on the product, complexity and the requirements we agree together.'),el('button',{class:'btn',id:'sub',type:'submit'},'Submit Order'),el('p',{id:'fmsg',role:'status'}));ID('f-pkg').onchange=syncPkg;syncPkg()}
+function fillForm(){ID('onotice').replaceChildren(...(!sb?[el('div',{class:'warn'},'The ordering backend is not connected yet.')]:!uid?[el('div',{class:'warn'},'Please sign in or create an account to place an order. ',el('button',{class:'btn sm',onclick:()=>{after='order';go('auth')}},'Sign in / Register'))]:[]));
+form.hidden=!(sb&&uid);if(!form.children.length||!uid)return;
+if(pre.pkg){ID('f-pkg').value=pre.pkg;syncPkg()}if(pre.style)ID('f-style').value=pre.style;if(pre.ref)ID('f-refurl').value=pre.ref;pre={};
+if(!ID('f-email').value)ID('f-email').value=session.user.email||''}
+form.onsubmit=async e=>{e.preventDefault();const v=Object.fromEntries(new FormData(form)),er={};
+['name','email','product','category','pkg','duration','desc','style'].forEach(k=>{if(!String(v[k]||'').trim())er[k]='This field is required.'});
+if(v.email&&!/^\S+@\S+\.\S+$/.test(v.email))er.email='Enter a valid email address.';if(v.refurl&&!/^https?:\/\/\S+$/i.test(v.refurl))er.refurl='Enter a full link starting with https://';
+['image','logofile'].forEach(k=>{const f=v[k];if(f&&f.size){if(!/^image\/(jpeg|png|webp)$/.test(f.type))er[k]='Use a JPG, PNG or WebP image.';else if(f.size>5242880)er[k]='Image must be under 5 MB.'}});
+F.forEach(f=>ID('e-'+f[0]).textContent=er[f[0]]||'');const fm=ID('fmsg');fm.className='';fm.textContent='';
+if(Object.keys(er).length){fm.className='err';fm.textContent='Please fix the highlighted fields.';return}
+if(!sb||!uid){fm.className='err';fm.textContent='Please sign in first. Your order was not saved.';return}
+const b=ID('sub');b.disabled=true;b.textContent='Submitting…';const id=crypto.randomUUID();
+const up=async(f,n)=>{if(!f||!f.size)return null;const p=`${uid}/${id}/${n}.${f.type.split('/')[1]}`,r=await sb.storage.from('order-files').upload(p,f,{contentType:f.type});if(r.error)throw r.error;return p};
+try{const ip=await up(v.image,'product'),lp=await up(v.logofile,'logo');
+const r=await sb.from('orders').insert({id,user_id:uid,customer_name:v.name.trim(),email:v.email.trim(),whatsapp:v.wa||null,product_name:v.product.trim(),category:v.category,package_name:v.pkg,package_price:pk().p,duration:v.duration,description:v.desc.trim(),style:v.style.trim(),reference_url:v.refurl||null,image_path:ip,logo_path:lp,extra_notes:v.notes||null}).select('ref').single();
+if(r.error)throw r.error;msel=id;form.hidden=true;const s=ID('osuccess');s.hidden=false;s.replaceChildren(el('h3',{class:'ok'},'Order received'),el('p',{},'Your order reference is ',el('b',{},r.data.ref),'. Follow its status and chat with BrandFlux in My Orders.'),el('a',{class:'btn',href:'#orders'},'Go to My Orders'));form.reset();syncPkg();loadOrders()}
+catch(x){fm.className='err';fm.textContent='We could not save your order, so nothing was submitted. Please check your connection and try again.'}
+b.disabled=false;b.textContent='Submit Order'};
+/* chat */
+function chat(box,o,me){box.replaceChildren();const log=el('div',{class:'log',role:'log','aria-live':'polite'}),inp=el('input',{placeholder:'Write a message or paste a link…',maxlength:'2000','aria-label':'Message'}),msg=el('p',{class:'err'});
+const load=async()=>{const r=await sb.from('messages').select('*').eq('order_id',o.id).order('created_at');if(r.error){msg.textContent='Could not load messages.';return}msg.textContent='';
+log.replaceChildren(...(r.data.length?r.data.map(m=>el('div',{class:'msg '+(m.is_system?'system':m.sender_id===me?'me':'')},m.is_system?null:el('small',{},(m.sender_id===me?'You':m.sender_id===o.user_id?'Customer':'BrandFlux')+' · '+fmt(m.created_at)),el('p',{},...rich(m.body)),m.is_system?el('small',{},fmt(m.created_at)):null)):[el('p',{class:'mut'},'No messages yet.')]));log.scrollTop=log.scrollHeight};
+box.append(log,el('form',{class:'row',onsubmit:async e=>{e.preventDefault();const t=inp.value.trim();if(!t)return;inp.value='';const r=await sb.from('messages').insert({order_id:o.id,sender_id:me,body:t});if(r.error){inp.value=t;msg.textContent='Message not sent. Please try again.'}else load()}},inp,el('button',{class:'btn sm'},'Send')),msg);
+load();const ch=sb.channel('m-'+o.id).on('postgres_changes',{event:'INSERT',schema:'public',table:'messages',filter:'order_id=eq.'+o.id},load).subscribe(),poll=setInterval(load,15000);
+const un=()=>{sb.removeChannel(ch);clearInterval(poll)};un.inp=inp;return un}
+const info=(o,box)=>{[['image_path','Product image'],['logo_path','Logo / assets']].forEach(async([k,l])=>{if(o[k]){const r=await sb.storage.from('order-files').createSignedUrl(o[k],3600);if(r.data)box.append(el('p',{style:'margin:4px 0'},el('b',{},l+': '),el('a',{href:r.data.signedUrl,target:'_blank',rel:'noopener'},'Open file')))}});
+return[['Product',o.product_name],['Category',o.category],['Package',o.package_name+' ('+o.package_price+')'],['Duration',o.duration],['Style',o.style],['Description',o.description],['Reference video',o.reference_url],['Notes',o.extra_notes],['Customer',isAdmin?o.customer_name+' · '+o.email+(o.whatsapp?' · '+o.whatsapp:''):null]].filter(r=>r[1]).map(r=>el('p',{style:'margin:4px 0'},el('b',{},r[0]+': '),...rich(r[1])))};
+async function loadOrders(){if(!sb||!uid)return;const r=await sb.from('orders').select('*').order('created_at',{ascending:false});if(r.error)return;orders=r.data;renderMine();if(isAdmin)renderA()}
+/* my orders */
+let msel=null,mchat=null,mfor=null;
+function renderMine(){const L=ID('mlist');
+if(!uid){L.replaceChildren(el('p',{class:'mut'},'Please sign in to see your orders. '),el('a',{class:'btn sm',href:'#auth'},'Sign in / Register'));ID('mdetail').hidden=true;return}
+L.replaceChildren(...(orders.length?orders.map(o=>el('button',{class:'item'+(o.id===msel?' on':''),onclick:()=>{msel=o.id;renderMine()}},el('span',{},o.product_name+' · '+o.ref),el('span',{class:'st'},o.status))):[el('p',{class:'mut'},'You have no orders yet. '),el('a',{class:'btn sm',href:'#order'},'Place your first order')]));
+const o=orders.find(x=>x.id===msel);ID('mdetail').hidden=!o;if(!o)return;const box=el('div');
+ID('minfo').replaceChildren(el('h3',{},o.product_name),el('p',{},el('span',{class:'st'},o.status),' · Ref '+o.ref),...info(o,box),box,o.final_price?el('p',{},el('b',{},'Agreed price: '),o.final_price):null,o.delivery_link?el('p',{},el('b',{},'Delivery link: '),...rich(o.delivery_link)):null);
+if(mfor!==o.id){mchat&&mchat();mfor=o.id;mchat=chat(ID('mchat'),o,uid)}}
+/* admin */
+let asel=null,afor=null,achat=null,edit=null;
+async function loadAdmin(){ID('adm').hidden=!isAdmin;ID('adnote').hidden=isAdmin;ID('adnote').textContent='Admin access is limited to the BrandFlux owner account. Sign in with your admin account.';if(!isAdmin)return;await loadOrders();renderA();renderP();loadInbox()}
+function renderA(){ID('alist').replaceChildren(...(orders.length?orders.map(o=>el('button',{class:'item'+(asel===o.id?' on':''),onclick:()=>{asel=o.id;renderA();buildAD(o)}},el('span',{},o.product_name+' · '+o.ref),el('span',{class:'st'},o.status))):[el('p',{class:'mut'},'No orders yet.')]))}
+async function buildAD(o){if(afor===asel)return;afor=asel;achat&&achat();const box=ID('adetail');box.hidden=false;let note='';
+const n=await sb.from('order_notes').select('note').eq('order_id',o.id).maybeSingle();if(n.data)note=n.data.note||'';
+const sel=el('select',{'aria-label':'Status'},...ST.map(x=>el('option',{},x)));sel.value=o.status;
+const pr=el('input',{placeholder:'Final price, e.g. PKR 2,500',value:o.final_price||'','aria-label':'Final price'}),dl=el('input',{placeholder:'https://… delivery link',value:o.delivery_link||'','aria-label':'Delivery link'}),nt=el('textarea',{rows:'3',placeholder:'Internal notes (customers cannot see these)','aria-label':'Internal notes'}),m=el('p',{class:'mut',role:'status'}),cb=el('div'),fl=el('div');nt.value=note;
+const save=async()=>{m.className='mut';m.textContent='Saving…';const a=await sb.from('orders').update({status:sel.value,final_price:pr.value.trim()||null,delivery_link:dl.value.trim()||null}).eq('id',o.id),b=await sb.from('order_notes').upsert({order_id:o.id,note:nt.value});
+if(a.error||b.error){m.className='err';m.textContent='Could not save. Please try again.';return}m.textContent='Saved. The customer has been notified in their order chat.';loadOrders()};
+const q=(t,g)=>el('button',{class:'btn sm'+(g?' ghost':''),onclick:()=>{sel.value=g?'Cancelled':'Accepted';save()}},t);
+box.replaceChildren(el('h3',{},o.product_name+' · '+o.ref),...info(o,fl),fl,el('div',{class:'row',style:'margin:12px 0'},q('Accept order'),q('Reject order',1)),el('label',{},'Status'),sel,el('label',{},'Final price'),pr,el('label',{},'Delivery link'),dl,el('label',{},'Internal notes'),nt,el('p',{},el('button',{class:'btn',onclick:save},'Save changes')),m,el('h3',{},'Conversation'),cb);
+achat=chat(cb,o,uid);cb.append(el('button',{class:'btn ghost sm',onclick:()=>{if(!waLink){m.className='err';m.textContent='Add your WhatsApp number in config.js first.';return}achat.inp.value='You can also reach me on WhatsApp: '+waLink;achat.inp.focus()}},'Insert my WhatsApp link'))}
+function renderP(){if(!isAdmin)return;const f=ID('pform'),t=el('input',{placeholder:'Video title','aria-label':'Video title',value:edit?edit.title:''}),u=el('input',{placeholder:'YouTube, Vimeo or direct .mp4 link','aria-label':'Video link',value:edit?edit.url:''}),m=el('p',{class:'err'});
+f.replaceChildren(t,sp(),u,el('p',{},el('button',{class:'btn sm',onclick:async()=>{if(!t.value.trim()||!/^https?:\/\/\S+$/i.test(u.value.trim())){m.textContent='Enter a title and a full link starting with https://';return}
+const row={title:t.value.trim(),url:u.value.trim()},r=edit?await sb.from('portfolio_videos').update(row).eq('id',edit.id):await sb.from('portfolio_videos').insert(row);if(r.error){m.textContent='Could not save the video.';return}edit=null;loadItems()}},edit?'Replace video':'Add video'),edit?el('button',{class:'btn ghost sm',onclick:()=>{edit=null;renderP()}},'Cancel'):null),m);
+ID('plist').replaceChildren(...items.map(v=>el('div',{class:'row',style:'margin:6px 0;align-items:center'},el('span',{style:'flex:1'},v.title),el('button',{class:'btn ghost sm',onclick:()=>{edit=v;renderP()}},'Edit'),el('button',{class:'btn ghost sm',onclick:async()=>{if(confirm('Delete this video?')){const r=await sb.from('portfolio_videos').delete().eq('id',v.id);if(r.error)m.textContent='Could not delete.';else loadItems()}}},'Delete'))))}
+ID('adm').append(el('div',{class:'box',style:'margin-top:18px'},el('h3',{},'Contact messages'),el('div',{id:'inbox'})));
+async function loadInbox(){const r=await sb.from('contact_messages').select('*').order('created_at',{ascending:false}).limit(50);ID('inbox').replaceChildren(...(r.data&&r.data.length?r.data.map(c=>el('p',{},el('b',{},c.name+' · '+c.email),el('br'),c.message,el('br'),el('small',{class:'mut'},fmt(c.created_at)))):[el('p',{class:'mut'},'No messages yet.')]))}
+ID('rf').onclick=loadAdmin;setInterval(()=>{if(sb&&uid)loadOrders()},15000);
+/* init */
+renderWork();renderPricing();buildForm();contactForm();route();
+if(sb){(async()=>{const r=await sb.from('packages').select('*').order('sort');if(r.data&&r.data.length){PK=r.data.map(p=>({n:p.name,p:p.price_label,d:p.duration,f:p.features,hot:p.featured}));renderPricing();buildForm();fillForm()}})();loadItems();
+sb.auth.onAuthStateChange((ev,s)=>{session=s;setTimeout(refresh,0)});
+sb.channel('orders-live').on('postgres_changes',{event:'*',schema:'public',table:'orders'},()=>loadOrders()).subscribe()}
+</script></body></html>
